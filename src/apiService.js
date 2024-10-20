@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Set up base URL
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", // Your API base URL
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 // Function to get exercises by machineId

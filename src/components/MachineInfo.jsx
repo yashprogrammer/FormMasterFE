@@ -19,7 +19,6 @@ export default function MachineInfo({ machineId }) {
         setLoading(false); // Stop loading
       }
     };
-    console.log(machine);
 
     fetchMachineInfo(); // Call the function
   }, [machineId]); // Run when the component mounts
