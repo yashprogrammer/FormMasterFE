@@ -33,7 +33,7 @@ export default function MachineInfo({ machineId }) {
 
   return (
     <>
-      <div className="text-center py-6 md:w-3/4">
+      <div className="text-center py-6 md:w-3/4 flex items-center overflow-x-hidden">
         <img
           src={machine.imageUrl} // Use the imageUrl from the machine data
           alt={machine.name} // Use the machine name for alt text

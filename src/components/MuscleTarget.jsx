@@ -32,8 +32,8 @@ export default function MuscleTarget({ machineId }) {
     ); // Error handling
 
   return (
-    <div className="bg-teal-500 text-center py-4 rounded-lg my-6 md:w-3/4">
-      <h2 className="text-2xl font-semibold text-white">Muscle Targeted</h2>
+    <div className="bg-teal-500 text-justify py-4 rounded-lg my-6 md:w-3/4 flex items-center justify-center overflow-x-hidden">
+      <h2 className="text-2xl font-semibold text-white ml-5 break-words whitespace-normal">Muscle <br/> Targeted</h2>
       <img
         src={machine.targetedMuscles}
         alt="Muscle Targeted"
