@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faChevronUp,
+  faCirclePlay,
+} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 export default function ExerciseCard({
@@ -39,24 +43,47 @@ export default function ExerciseCard({
             }} // Open form check video in a new tab
             className="text-center p-2 bg-white text-black rounded-full w-[100%]"
           >
-            {!isView ? "View" : "Close"}
-            <FontAwesomeIcon icon={faChevronDown} className="ml-2 mt-1" />
+            {!isView ? (
+              <>
+                View
+                <FontAwesomeIcon icon={faChevronDown} className="ml-2 mt-1" />
+              </>
+            ) : (
+              <>
+                Close
+                <FontAwesomeIcon icon={faChevronUp} className="ml-2 mt-1" />
+              </>
+            )}
           </button>
         </div>
       </div>
       {isView ? (
-        <div className="flex flex-row w-[100%] ">
+        <div className="flex flex-row m-4 space-x-5 p-2">
           <button
             onClick={() => window.open(explanationVideoUrl, "_blank")} // Open explanation video in a new tab
-            className="p-3 m-3 bg-gray-700 text-white rounded-2xl text-center truncate"
+            className="flex flex-col items-center justify-center p-4 bg-black text-white rounded-2xl text-center truncate whitespace-nowrap"
           >
+            <FontAwesomeIcon
+              icon={faCirclePlay}
+              className="text-4xl text-white p-2 border-white"
+            />
             <h3>Form Check</h3>
+            <div className="text-[#c8c8c8] text-center">
+              <p>30 Sec</p>
+            </div>
           </button>
           <button
             onClick={() => window.open(explanationVideoUrl, "_blank")} // Open explanation video in a new tab
-            className=" p-3 m-3 bg-gray-700 text-white rounded-2xl text-center truncate"
+            className="flex flex-col justify-center items-center  p-4 bg-black text-white rounded-2xl text-center truncate whitespace-nowrap "
           >
-            <h3>Form Check</h3>
+            <FontAwesomeIcon
+              icon={faCirclePlay}
+              className="text-4xl text-white p-2 border-white"
+            />
+            <h3>Explanation</h3>
+            <div className="text-[#c8c8c8] text-center">
+              <p>10 min</p>
+            </div>
           </button>
         </div>
       ) : (
