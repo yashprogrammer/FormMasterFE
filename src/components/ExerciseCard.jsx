@@ -31,7 +31,6 @@ export default function ExerciseCard({
         <div className="mt-2 w-[30%]">
           <button
             onClick={() => {
-              // window.open(formCheckVideoUrl, "_blank");
               if (isView) {
                 handleCloseDetails();
               } else {
@@ -48,12 +47,18 @@ export default function ExerciseCard({
         
       </div>
       {isView ? (
-          <div>
+          <div className="flex flex-row w-[100%] ">
             <button
               onClick={() => window.open(explanationVideoUrl, "_blank")} // Open explanation video in a new tab
-              className="mt-2 px-4 py-2 bg-gray-700 text-white rounded-full"
+              className="p-3 m-3 bg-gray-700 text-white rounded-2xl text-center truncate"
             >
-              View Explanation Video
+              <h3>Form Check</h3>
+            </button>
+            <button
+              onClick={() => window.open(explanationVideoUrl, "_blank")} // Open explanation video in a new tab
+              className=" p-3 m-3 bg-gray-700 text-white rounded-2xl text-center truncate"
+            >
+              <h3>Form Check</h3>
             </button>
           </div>
         ) : (
