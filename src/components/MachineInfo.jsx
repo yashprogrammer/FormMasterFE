@@ -33,13 +33,19 @@ export default function MachineInfo({ machineId }) {
 
   return (
     <>
-      <div className="text-center py-6 md:w-3/4">
-        <img
-          src={machine.imageUrl} // Use the imageUrl from the machine data
-          alt={machine.name} // Use the machine name for alt text
-          className="mx-auto w-24 h-24"
-        />
-        <h1 className="text-3xl font-bold text-white">{machine.name}</h1>
+      <div className="flex flex-row m-4">
+        <div className=" text-left py-6 md:w-3/4 hover:border-2 border-transparent hover: border-blue-800 justify-between">
+          <img
+            src={machine.imageUrl} // Use the imageUrl from the machine data
+            alt={machine.name} // Use the machine name for alt text
+            className="mx-auto w-24 h-24"
+          />
+        </div>
+        <div className="m-4">
+          <p className="text-3xl font-bold text-white text-left ml-3 font-mostserrat leading-10">
+            {machine.name}
+          </p>
+        </div>
       </div>
       <MuscleTarget machineId={{ machineId }} />
       <ExerciseList machineId={{ machineId }} />

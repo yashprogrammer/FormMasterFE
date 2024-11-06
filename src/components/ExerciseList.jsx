@@ -31,10 +31,10 @@ export default function ExerciseList({ machineId }) {
     ); // Error handling
 
   return (
-    <div className="mt-6">
-      <h2 className="text-2xl font-bold text-white mb-4">
+    <div className="mt-6 mx-4">
+      <p className="text-2xl font-bold text-white mb-4 text-left font-montserrat">
         Exercises Available
-      </h2>
+      </p>
       {exercises.length > 0 ? (
         exercises.map((exercise) => (
           <ExerciseCard

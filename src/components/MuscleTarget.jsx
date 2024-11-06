@@ -32,13 +32,21 @@ export default function MuscleTarget({ machineId }) {
     ); // Error handling
 
   return (
-    <div className="bg-teal-500 text-center py-4 rounded-lg my-6 md:w-3/4">
-      <h2 className="text-2xl font-semibold text-white">Muscle Targeted</h2>
-      <img
-        src={machine.targetedMuscles}
-        alt="Muscle Targeted"
-        className="mx-auto mt-4 w-32"
-      />
+    <div className="flex bg-teal-500 py-4 mx-4 rounded-xl my-6 items-center justify-around  bg-gradient-to-r from-[#46BCAE] to-[#258278]">
+      <div className="md:w-3/4 p-3">
+        <p className="text-3xl font-semibold font-lato text-white text-left">
+          Muscle <br />
+          Targeted
+        </p>
+      </div>
+
+      <div>
+        <img
+          src={machine.targetedMuscles}
+          alt="Muscle Targeted"
+          className="mx-auto mt-4 w-32"
+        />
+      </div>
     </div>
   );
 }
